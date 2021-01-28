@@ -115,7 +115,9 @@ li.nav-item.nav-item__middle {
 
 .rotate svg {
     transform: rotate(180deg);
+    color: #B4B4BB;
 }
+
 
 .circle {
     width: 2px;
@@ -287,6 +289,27 @@ td.entries {
 
 .entries ul {
     color: #25213B;
+}
+
+.input-icons {
+    position: relative;
+    margin-right: -80px;
+}
+
+.input-field {
+    height: 35px;
+    border: 1px solid #DCE1E7;
+    padding: 10px 10px 10px 35px;
+    border-radius: 5px;
+    width: 41%;
+    margin-left: 180px;
+}
+
+.input-icons span {
+    position: absolute;
+    top: 7px;
+    left: 35%;
+    pointer-events: none;
 }
 
 

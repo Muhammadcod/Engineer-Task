@@ -10,6 +10,7 @@ import {ReactComponent as Phone} from './assets/Vectorphone.svg';
 import {ReactComponent as Home} from './assets/Shape-home.svg';
 import {ReactComponent as Location} from './assets/pin 1-location.svg';
 import {ReactComponent as Journal} from './assets/notes-book 1.svg';
+import {ReactComponent as Hand} from './assets/Search-hand.svg';
 import {ReactComponent as Division} from './assets/Opportunitiydivis.svg';
 import {ReactComponent as Box} from './assets/Shape-box.svg';
 import {
@@ -76,10 +77,12 @@ function App() {
                                     className="sr-only">(current)</span></a>
                             </li>
                         </ul>
-                        <form className="form-inline  mr-5">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search"
-                                   aria-label="Search"/>
-                        </form>
+                        <div className="input-icons">
+                            <span className='icon'><Hand /></span>
+                            <input className="input-field"
+                                   type="text"
+                                   placeholder="" />
+                        </div>
                         <ul className="navbar-nav">
                             <li className="nav-item nav-item__middle mr-5">
                                 <span>
