@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import EmployeeInfo from "./components/EmployeeInfo";
+import {FiPhone, GoMail, IoLocationOutline, RiBookletLine, BiFingerprint} from "react-icons/all";
 
 
 function App() {
@@ -11,23 +12,47 @@ function App() {
     useEffect( () => {
         axios.get(url)
             .then(function (response) {
-                // handle success
-                console.log('res',response);
                 setEmployees(response.data)
 
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
             });
     }, [])
 
-    console.log('emp',employees);
 
 
     return (
         <div className="App">
-            <section>A</section>
+            <section className='container-fluid'>
+                <nav className="navbar navbar-expand-lg navbar-light">
+                    <a className="navbar-brand" href="/">Navbar</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item active">
+                                <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Entries</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Divisions</a>
+                            </li>
+                        </ul>
+                        <form className="form-inline my-2 my-lg-0">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search"
+                                   aria-label="Search" />
+                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </section>
             <section className='container-fluid mb-3 border'>
                 <div className='pad'>
                     Division > Module
@@ -38,7 +63,7 @@ function App() {
                     <div className='col metric-box-wrapper'>
                         <div className='border metric-box white'>
                             <span className=''>
-                                <h2>31454</h2>
+                                <h3 className='metric--title'>31454</h3>
                                 <span>Ongoing Metric</span>
                             </span>
                             <span className=''>B</span>
@@ -48,7 +73,7 @@ function App() {
                     <div className='col metric-box-wrapper'>
                         <div className='border metric-box white'>
                             <span className=''>
-                                <h2>2343</h2>
+                                <h3 className='metric--title'>2343</h3>
                                 <span>Past Metric</span>
                             </span>
                             <span className=''>B</span>
@@ -58,7 +83,7 @@ function App() {
                     <div className='col metric-box-wrapper'>
                         <div className='border metric-box white'>
                             <span className=''>
-                                <h2>14224</h2>
+                                <h3 className='metric--title'>14224</h3>
                                 <span>Missed Metric</span>
                             </span>
                             <span className=''>B</span>
@@ -68,7 +93,7 @@ function App() {
                     <div className='col metric-box-wrapper'>
                         <div className='border metric-box white'>
                             <span className=''>
-                                <h2>635</h2>
+                                <h3 className='metric--title'>635</h3>
                                 <span>Failed Metric</span>
                             </span>
                             <span className=''>B</span>
@@ -78,7 +103,7 @@ function App() {
                     <div className='col metric-box-wrapper'>
                         <div className='border metric-box white'>
                             <span className=''>
-                                <h2>11334</h2>
+                                <h3 className='metric--title'>11334</h3>
                                 <span>Pending Metric</span>
                             </span>
                             <span className=''>B</span>
@@ -91,25 +116,25 @@ function App() {
             <section className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-3'>
-                        <div className='border pad mb-2 white profile-info'>
+                        <div className='border pad mb-4 white profile-info'>
                             <ul>
                                 <li className='info'>
-                                    6 <span className=''>Division Summary</span>
+                                    <FiPhone /> <span className='pl-2'>Division Summary</span>
                                 </li>
                                 <li className='info'>
-                                    1 <span className=''>08012345678</span>
+                                    <FiPhone /> <span className='pl-2'>08012345678</span>
                                 </li>
                                 <li className='info'>
-                                    2 <span className=''>asbfefr@gmail.com</span>
+                                    <GoMail /> <span className='pl-2'>asbfefr@gmail.com</span>
                                 </li>
                                 <li className='info'>
-                                    3 <span className=''>Mojidi, Lagos</span>
+                                    <IoLocationOutline /> <span className='pl-2'>Mojidi, Lagos</span>
                                 </li>
                                 <li className='info'>
-                                    4 <span className=''>2 Journal entries</span>
+                                    <RiBookletLine /> <span className='pl-2'>2 Journal entries</span>
                                 </li>
                                 <li className='info'>
-                                    5 <span className=''>24 fingerprints enrolled</span>
+                                   <BiFingerprint /> <span className='pl-2'>24 fingerprints enrolled</span>
                                 </li>
                             </ul>
                         </div>

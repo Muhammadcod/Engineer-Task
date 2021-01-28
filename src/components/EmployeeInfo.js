@@ -1,6 +1,9 @@
 import React from 'react';
+// import { FaBeer } from 'react-icons/fa';
+import { IoIosArrowDropdown, BiDotsVerticalRounded} from "react-icons/all";
 
 function EmployeeInfo(props) {
+
 const {employees} = props
     return (
             <>
@@ -14,7 +17,7 @@ const {employees} = props
                                 </label>
                             </div>
                         </th>
-                        <td>M</td>
+                        <td style={{color: `blue`}}><IoIosArrowDropdown /></td>
                         <td>{user.fullname}</td>
                         <td className='location'>
                             <span className='d-block'>
@@ -47,14 +50,14 @@ const {employees} = props
                         </td>
                         <td>
                             {user.risk <= 8 ? (
-                                 <p className='green'>A Low Risk</p>
+                                 <span className='green'>A Low Risk</span>
                             ) : user.risk > 8 && user.risk <= 14 ? (
-                                <p className='blue'>A Mid Risk</p>
+                                <span className='blue'>A Mid Risk</span>
                             ) : (
-                                <p className='red'>A High Risk</p>
+                                <span className='red'>A High Risk</span>
                             )}
                         </td>
-                        <td>|</td>
+                        <td><BiDotsVerticalRounded /></td>
                     </tr>
                 ))}
 
