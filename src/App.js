@@ -35,13 +35,13 @@ function App() {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
+                            <li className="nav-item nav-item__link active">
                                 <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item nav-item__link">
                                 <a className="nav-link" href="/">Entries</a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item nav-item__link">
                                 <a className="nav-link" href="/">Divisions</a>
                             </li>
                         </ul>

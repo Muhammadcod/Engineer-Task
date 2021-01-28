@@ -3,15 +3,26 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #F5F5F5;
 }
+
 .profile-info ul li {
   padding: 7px 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
   margin-bottom: 0;
 
 }
+
+li.nav-item.nav-item__link {
+  margin-bottom: -10px;
+}
+
+li.nav-item a {
+  border-bottom: 4px solid blue;
+}
+
 ul.exception {
   list-style-type: disc;
   padding-left: 13px;
@@ -32,21 +43,26 @@ ul.exception {
 .metric-box span .metric-title {
   font-weight: bold;
 }
+
 .metric-box span span  {
   color: gray;
   opacity: .7;
   font-weight: 600;
 }
+
 .pad {
   padding: 15px;
 }
+
 .white {
   background: #FFFFFF;
 }
+
 table tbody tr td,
 table tbody tr th {
   vertical-align: middle !important;
 }
+
 tbody tr td.location,
 td.entries {
   font-size: 13px;
@@ -56,18 +72,23 @@ td.entries {
 .red {
   color: #8b0000;
 }
+
 .green {
   color: green;
 }
+
 .blue {
   color: blue;
 }
+
 .orange {
   color: orange;
 }
+
 .purple {
   color: purple;
 }
+
 .timeline {
   width: 100%;
   max-width: 800px;
@@ -76,6 +97,7 @@ td.entries {
   /*padding: 100px 50px;*/
   position: relative;
 }
+
 .timeline:before {
   content: '';
   position: absolute;
@@ -92,15 +114,6 @@ td.entries {
   text-align: left;
   position: relative;
 }
-/*.entry .title {
-  margin-bottom: 0.5em;
-  float: left;
-  border: 1px solid red;
-  width: 33%;
-  padding-right: 30px;
-  text-align: right;
-  position: relative;
-}*/
 
 .entry .body:before {
   content: '';
@@ -133,22 +146,7 @@ td.entries {
   box-sizing: border-box;*/
 }
 /*
-.timeline {
-  width: 100%;
-  !*max-width: 800px;*!
-  background: #fff;
-  padding: 100px 50px;
-  position: relative;
-}
-.timeline:before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: calc(33% + 15px);
-  bottom: 0px;
-  width: 4px;
-  background: #ddd;
-}
+
 .timeline:after {
   content: "";
   display: table;
@@ -159,30 +157,7 @@ td.entries {
   text-align: left;
   position: relative;
 }
-.entry .title {
-  margin-bottom: 0.5em;
-  float: left;
-  width: 33%;
-  padding-right: 30px;
-  text-align: right;
-  position: relative;
-}
-.entry .title:before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 4px solid salmon;
-  background-color: #fff;
-  border-radius: 100%;
-  top: 15%;
-  right: -8px;
-  z-index: 99;
-}
-.entry .title h3 {
-  margin: 0;
-  font-size: 120%;
-}
+
 .entry .title p {
   margin: 0;
   font-size: 100%;
