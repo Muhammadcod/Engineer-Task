@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import EmployeeInfo from "./components/EmployeeInfo";
-import {ReactComponent as Calender} from './assets/Vector-calender.svg';
 import {ReactComponent as Mail} from './assets/envelope 1-envelop.svg';
 import {ReactComponent as Fingerprint} from './assets/Group 1800-finger.svg';
 import {ReactComponent as Logo} from './assets/Screen Shot 2021-01-20 at 14.38 1logo.svg';
@@ -13,7 +12,12 @@ import {ReactComponent as Location} from './assets/pin 1-location.svg';
 import {ReactComponent as Journal} from './assets/notes-book 1.svg';
 import {ReactComponent as Division} from './assets/Opportunitiydivis.svg';
 import {ReactComponent as Box} from './assets/Shape-box.svg';
-
+import {
+    IoMegaphone,
+    ImNotification,
+    RiArrowDownSLine,
+    SiLighthouse,
+} from "react-icons/all";
 
 
 function App() {
