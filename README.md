@@ -1,6 +1,6 @@
 # FE-Engineer Task
 I  built this project as part of a job recruitment process
-Project can be found here https://boring-swirles-79b164.netlify.app/
+Project host site can be found here https://boring-swirles-79b164.netlify.app/
 ## Available Scripts
 
 Firstly, clone the project and 'cd into the project directory' and run the following command:
