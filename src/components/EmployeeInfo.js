@@ -1,6 +1,6 @@
 import React from 'react';
 // import { FaBeer } from 'react-icons/fa';
-import { IoIosArrowDropdown, BiDotsVerticalRounded} from "react-icons/all";
+import { IoIosArrowDropdown, BiDotsVerticalRounded, FiArrowDownRight, FiArrowRight, FiArrowUp} from "react-icons/all";
 
 function EmployeeInfo(props) {
 
@@ -31,12 +31,10 @@ const {employees} = props
                             {user.status > 1
                                 ? (
                                     <span className="badge badge-pill border orange">{ `${user.status} Issues found` }</span>
-                                )
-                                : user.status === 1 ? (
-                                <span className="badge badge-pill border orange">{ `${user.status} Issue found` }</span>
-                                )
-                                    : (
-                                <span className="badge badge-pill border purple">No issue</span>
+                                ) : user.status === 1 ? (
+                                    <span className="badge badge-pill border orange">{ `${user.status} Issue found` }</span>
+                                ) : (
+                                    <span className="badge badge-pill border purple">No issue</span>
                                 )
                             }
                         </td>
@@ -50,21 +48,18 @@ const {employees} = props
                         </td>
                         <td>
                             {user.risk <= 8 ? (
-                                 <span className='green'>A Low Risk</span>
+                                  <span className='green'><FiArrowDownRight /> Low Risk</span>
                             ) : user.risk > 8 && user.risk <= 14 ? (
-                                <span className='blue'>A Mid Risk</span>
+                                <span className='blue'><FiArrowRight /> Mid Risk</span>
                             ) : (
-                                <span className='red'>A High Risk</span>
+                                <span className='red'><FiArrowUp /> High Risk</span>
                             )}
                         </td>
                         <td><BiDotsVerticalRounded /></td>
                     </tr>
                 ))}
-
-
             </>
         );
-
 }
 
 export default EmployeeInfo;

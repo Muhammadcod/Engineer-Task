@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import EmployeeInfo from "./components/EmployeeInfo";
-import {FiPhone, GoMail, IoLocationOutline, RiBookletLine, BiFingerprint} from "react-icons/all";
+import {FiPhone, GoMail, IoLocationOutline, RiBookletLine, ImNotification, BiFingerprint, RiArrowDownSLine, SiLighthouse, BsBellFill} from "react-icons/all";
 
 
 function App() {
@@ -20,44 +20,71 @@ function App() {
             });
     }, [])
 
+    const currentDate = new Date();
 
+    const currentDayOfMonth = currentDate.getDate();
+    const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
+    const currentYear = currentDate.getFullYear();
+    const currentHour = currentDate.getHours()
+    const currentMin = currentDate.getMinutes()
+
+
+    const dateString = currentHour + ":" + currentMin + " " +currentDayOfMonth + "/" + (currentMonth + 1) + "/" + currentYear;
 
     return (
         <div className="App">
             <section className='container-fluid'>
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <a className="navbar-brand" href="/">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                    >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item nav-item__link active">
+                            <li className="nav-item nav-item__link ">
                                 <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                             </li>
                             <li className="nav-item nav-item__link">
                                 <a className="nav-link" href="/">Entries</a>
                             </li>
-                            <li className="nav-item nav-item__link">
+                            <li className="nav-item nav-item__link active">
                                 <a className="nav-link" href="/">Divisions</a>
                             </li>
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search"
-                                   aria-label="Search" />
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <form className="form-inline  mr-5">
+                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         </form>
+                        <ul className="navbar-nav">
+                            <li className="nav-item nav-item__middle mr-5">
+                                <span>
+                                    <BsBellFill />
+                                </span>
+                            </li>
+                            <li className="nav-item">
+                                <img
+                                    src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4"
+                                    alt="Avatar" className="avatar small" />
+                                    <RiArrowDownSLine />
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </section>
+
             <section className='container-fluid mb-3 border'>
                 <div className='pad'>
                     Division > Module
                 </div>
             </section>
+
             <section className='container-fluid metric-wrapper mb-3'>
                 <div className='row'>
                     <div className='col metric-box-wrapper'>
@@ -66,7 +93,9 @@ function App() {
                                 <h3 className='metric--title'>31454</h3>
                                 <span>Ongoing Metric</span>
                             </span>
-                            <span className=''>B</span>
+                            <span className='rotate'>
+                                <ImNotification />
+                            </span>
                         </div>
 
                     </div>
@@ -76,7 +105,9 @@ function App() {
                                 <h3 className='metric--title'>2343</h3>
                                 <span>Past Metric</span>
                             </span>
-                            <span className=''>B</span>
+                            <span className='rotate'>
+                                <ImNotification />
+                            </span>
                         </div>
 
                     </div>
@@ -86,7 +117,9 @@ function App() {
                                 <h3 className='metric--title'>14224</h3>
                                 <span>Missed Metric</span>
                             </span>
-                            <span className=''>B</span>
+                            <span className='rotate'>
+                                <ImNotification />
+                            </span>
                         </div>
 
                     </div>
@@ -96,7 +129,9 @@ function App() {
                                 <h3 className='metric--title'>635</h3>
                                 <span>Failed Metric</span>
                             </span>
-                            <span className=''>B</span>
+                            <span className='rotate'>
+                                <ImNotification />
+                            </span>
                         </div>
 
                     </div>
@@ -106,7 +141,9 @@ function App() {
                                 <h3 className='metric--title'>11334</h3>
                                 <span>Pending Metric</span>
                             </span>
-                            <span className=''>B</span>
+                            <span className='rotate'>
+                                <ImNotification />
+                            </span>
                         </div>
 
                     </div>
@@ -116,10 +153,13 @@ function App() {
             <section className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-3'>
-                        <div className='border pad mb-4 white profile-info'>
+                        <div className='pad mb-4 white profile-info'>
                             <ul>
                                 <li className='info'>
-                                    <FiPhone /> <span className='pl-2'>Division Summary</span>
+                                    <span>
+                                        <SiLighthouse />
+                                    </span>
+                                    <span className='pl-2'>Division Summary</span>
                                 </li>
                                 <li className='info'>
                                     <FiPhone /> <span className='pl-2'>08012345678</span>
@@ -138,39 +178,40 @@ function App() {
                                 </li>
                             </ul>
                         </div>
-                            <div className="border pad timeline">
-                                <div className="entry">
+                            <div className="pad timeline">
+                                <div className="entry mb-2">
 
                                     <div className="body">
-                                        <p>Voluptatibus veniam .</p>
+                                        <p>Searched "Journal Entries" on Division module</p>
                                         <ul>
-                                            <li>Rerum sit libero possimus amet excepturi</li>
-
+                                            <li>{dateString}</li>
                                         </ul>
+                                       <span className='pl-3'>Web</span>
+                                    </div>
+                                </div>
+                                <div className="entry mb-2">
+
+                                    <div className="body">
+                                        <p>Searched "Fingerprint record" on Division module</p>
+                                        <ul>
+                                            <li>{dateString}</li>
+                                        </ul>
+                                       <span className='ml-3'>Web</span>
                                     </div>
                                 </div>
                                 <div className="entry">
 
                                     <div className="body">
-                                        <p>Voluptatibus veniam </p>
+                                        <p>Searched "Journal Entries" on Division module</p>
                                         <ul>
-                                            <li>Rerum sit libero possimus amet excepturi</li>
-
+                                            <li>{dateString}</li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div className="entry">
-
-                                    <div className="body">
-                                        <p>Voluptatibus veniam .</p>
-                                        <ul>
-                                            <li>Rerum sit libero possimus amet excepturi</li>
-
-                                        </ul>
+                                       <span className='pl-3'>Web</span>
                                     </div>
                                 </div>
                             </div>
                     </div>
+
                     <div className='col-md-9 '>
                         <div className='white'>
                             <table className="table">
@@ -198,7 +239,6 @@ function App() {
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </section>
