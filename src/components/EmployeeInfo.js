@@ -1,8 +1,6 @@
 import React from 'react';
-// import { FaBeer } from 'react-icons/fa';
 import { ReactComponent as Menu} from '../assets/Vector-menu.svg';
-
-import { IoIosArrowDropdown, BiDotsVerticalRounded, FiArrowDownRight, FiArrowRight, FiArrowUp} from "react-icons/all";
+import { IoIosArrowDropdown, FiArrowDownRight, FiArrowRight, FiArrowUp} from "react-icons/all";
 
 function EmployeeInfo(props) {
 

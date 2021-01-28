@@ -14,20 +14,6 @@ import {ReactComponent as Journal} from './assets/notes-book 1.svg';
 import {ReactComponent as Division} from './assets/Opportunitiydivis.svg';
 import {ReactComponent as Box} from './assets/Shape-box.svg';
 
-import {
-    FiPhone,
-    GoMail,
-    IoLocationOutline,
-    ImHome3,
-    IoCalendarClearSharp,
-    RiBookletLine,
-    IoMegaphone,
-    ImNotification,
-    BiFingerprint,
-    RiArrowDownSLine,
-    SiLighthouse,
-    BsBellFill
-} from "react-icons/all";
 
 
 function App() {
