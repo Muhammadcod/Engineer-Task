@@ -227,6 +227,13 @@ li.nav-item.nav-item__middle {
 .cols-2 {
     width: 79.4%;
 }
+
+@media(max-width: 600px) {
+    .cols-2 {
+        border: 1px solid red;
+    }
+}
+
 .employee-wrapper {
 
 }

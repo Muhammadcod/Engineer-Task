@@ -40,12 +40,10 @@ function App() {
     const currentDate = new Date();
 
     const currentDayOfMonth = currentDate.getDate();
-    const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
+    const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
     const currentHour = currentDate.getHours()
     const currentMin = currentDate.getMinutes()
-
-
     const dateString = currentHour + ":" + currentMin + " " + currentDayOfMonth + "/" + (currentMonth + 1) + "/" + currentYear;
 
     return (
@@ -107,7 +105,7 @@ function App() {
             </section>
 
             <section className='container-fluid metric-wrapper mb-3'>
-                <div className='row'>
+                <div className='row row-cols-sm-1 row-cols-md-5'>
                     <div className='col metric-box-wrapper'>
                         <div className=' metric-box white'>
                             <span className=''>
