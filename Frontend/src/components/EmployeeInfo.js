@@ -4,11 +4,11 @@ import { IoIosArrowDropdown} from "react-icons/all";
 
 function EmployeeInfo(props) {
 
-const {student} = props
+const {students} = props
     return (
             <>
-                {/*{student.map((user) => (
-                    <tr key={user._id} className='employee-info'>
+                {/*{students.map((user) => (
+                    <tr key={user.studentId} className='employee-info'>
                         <th scope="row">
                             <div className="custom-control custom-checkbox">
                                 <input type="checkbox" className="custom-control-input" id="customCheck1" />
@@ -28,7 +28,7 @@ const {student} = props
                         </td>
                     </tr>
                 ))}*/}
-                {student}
+                {students}
             </>
         );
 }
