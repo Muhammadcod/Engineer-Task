@@ -22,11 +22,25 @@ import {
 
 
 function App() {
-    const [employees, setEmployees] = useState([])
+    const [student, setStudent] = useState([])
 
-    const url = 'https://my.api.mockaroo.com/employees.json?key=2281f770'
+    // const url = 'https://my.api.mockaroo.com/employees.json?key=2281f770'
+    const url = 'http://localhost:3002/api/student'
 
     useEffect(() => {
+        axios.get(url)
+            .then(function (response) {
+                setStudent(response.data)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }, [])
+    console.log('student', student)
+
+
+    /* useEffect(() => {
         axios.get(url)
             .then(function (response) {
                 setEmployees(response.data)
@@ -35,8 +49,7 @@ function App() {
             .catch(function (error) {
                 console.log(error);
             });
-    }, [])
-
+    }, [])*/
     const currentDate = new Date();
 
     const currentDayOfMonth = currentDate.getDate();
@@ -265,7 +278,7 @@ function App() {
                                 </tr>
                                 </thead>
                                 <tbody className='employee-wrapper'>
-                                <EmployeeInfo employees={employees}/>
+                                <EmployeeInfo employees={student}/>
                                 </tbody>
                             </table>
                         </div>
