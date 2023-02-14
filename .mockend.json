@@ -1,0 +1,38 @@
+{
+  "User": {
+    "_": { "items": 10 },
+    "firstName": { "regexp": "[A-Z][a-z]{5,10}" },
+    "lastName": { "regexp": "[A-Z][a-z]{5,10}" },
+    "location": {
+      "loremWord": {}
+    },
+    "houseNo": {
+      "int": {
+        "min": 0,
+        "max": 30
+      }
+    },
+    "address": { "loremWords": { "minLength": 5, "maxLength": 20 } },
+    "status": {
+      "int": {
+        "min": 0,
+        "max": 20
+      }
+    },
+    "entries": {
+      "int": {
+        "min": 0,
+        "max": 30
+      }
+    },
+    "risk": {
+      "string": [ "Low", "Mid", "High"]
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    }
+  }
+}
