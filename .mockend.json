@@ -26,7 +26,7 @@
       }
     },
     "risk": {
-      "string": [ "Low", "Mid", "High"]
+      "string": ["Low", "Mid", "High"]
     },
     "createdAt": {
       "dateTime": {
